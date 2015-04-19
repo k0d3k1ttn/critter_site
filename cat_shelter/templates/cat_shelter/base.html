@@ -8,13 +8,17 @@
   </head>
   <body>
     <div class="page-header">
-      <h1><a href="/">Tara's Kitty Kastle</a></h1>
+      <a href="{% url 'cat_shelter.views.cat_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+      <h1><a href="">Tara's Kitty Kastle!</a></h1>
     </div>
+
     <div class="content container">
-      <div class="col-md-8">
-      {% block content %}
-      {% endblock %}
-      </div>
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
     </div>
   </body>
 </html>

@@ -1,9 +1,6 @@
-<html>
-  <head>
-    <title>Kitty Kastle</title>
-  </head>
-  <body>
-    <div>
+{% extends 'cat_shelter/base.html' %}
+
+{% block content %}
       <img src="{{ cat.image }}" alt="{{ cat.name }}" style="width:400px">
       <p><h1>{{ cat.name }}</h1></p>
       <p>Age: {{ cat.age }}</p>
@@ -15,6 +12,5 @@
         No
       {% endif %}</p>
       <p>{{ cat.desc|linebreaks }}</p>      
-    </div>
-  </body>
-</html>
+      <a class="btn btn-default" href="{% url 'cat_edit' pk=cat.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+{% endblock %}
