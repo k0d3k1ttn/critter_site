@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Kitty Kastle</title>
+  </head>
+  <body>
+    <div>
+      <p><h1>{{ cat.name }}</h1></p>
+      <p>Age: {{ cat.age }}</p>
+      <p>Color: {{ cat.color }}</p>
+      <p>Fluffy?: 
+      {% if cat.fluffy %}
+        SO FLUFFY!
+      {% else %}
+        No
+      {% endif %}</p>
+      <p>{{ cat.desc|linebreaks }}</p>      
+    </div>
+  </body>
+</html>

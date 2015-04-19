@@ -9,7 +9,7 @@
 
     {% for cat in mycats %}
       <div>
-        <h2><a href=""> {{ cat.name }}</a></h2>
+        <h2><a href="{%url 'cat_shelter.views.cat_detail' pk=cat.pk%}"> {{ cat.name }}</a></h2>
         <p>Age: {{ cat.age }}</p>
         <p>Fluffy: 
         {% if cat.fluffy %}
