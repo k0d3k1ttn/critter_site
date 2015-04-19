@@ -10,6 +10,7 @@ class Cat(models.Model):
   desc = models.TextField()
   adopted = models.DateTimeField( blank=True, null=True )
   fluffy = models.BooleanField()
+  image = models.CharField(max_length=500, blank=True)
 
   def adopt(self):
     self.adopted = timezone.now()
